@@ -1,2 +1,5 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+﻿using tpmodul5_1302204081;
+
+SayaTubeVideo video = new SayaTubeVideo("Tutorial Design By Contract – Kevin Febrian");
+video.IncreasePlayCount(1);
+video.PrintVideoDetails();
