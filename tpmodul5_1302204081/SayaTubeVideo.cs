@@ -15,16 +15,36 @@ namespace tpmodul5_1302204081
 
 		public SayaTubeVideo(string judulVideo)
 		{
-			this.title = judulVideo;
+			try
+			{
+			int totalStrJudul = judulVideo.Length;
+				if (totalStrJudul <= 100)
+				{
+					this.title = judulVideo;
+				}
+			}catch(Exception ex)
+			{
+				Console.WriteLine(ex.Message);
+			}
+			
 			Random generator  = new Random();
 			int randNum = generator.Next(100000);
 			string fiveDigitsNumber = randNum.ToString("D5");
 			this.id = Int32.Parse(fiveDigitsNumber);
 			this.playCount = 0;
+			
 		}
 		public void IncreasePlayCount(int x)
 		{
+			try
+			{
 			this.playCount = x;
+
+			}catch(Exception ex)
+			{
+				Console.WriteLine(ex.Message);
+			}
+
 		}
 		public void PrintVideoDetails()
 		{
